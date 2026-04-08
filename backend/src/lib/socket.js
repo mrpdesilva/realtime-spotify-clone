@@ -5,7 +5,7 @@ export const initializeSocket = (server) => {
     const io = new Server(server, {
         cors: {
             origin: process.env.NODE_ENV === "production"
-                ? process.env.FRONTEND_URL  // e.g. https://your-app.onrender.com
+                ? "/"  // e.g. https://your-app.onrender.com
                 : "http://localhost:3000",
             credentials: true
         }
