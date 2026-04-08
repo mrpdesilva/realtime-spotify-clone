@@ -4,7 +4,9 @@ import { Message } from "../models/message.model.js";
 export const initializeSocket = (server) => {
     const io = new Server(server, {
         cors: {
-            origin: "http://localhost:3000",
+            origin: process.env.NODE_ENV === "production"
+                ? process.env.FRONTEND_URL  // e.g. https://your-app.onrender.com
+                : "http://localhost:3000",
             credentials: true
         }
     })
