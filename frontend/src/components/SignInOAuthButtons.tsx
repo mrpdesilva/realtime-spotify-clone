@@ -22,6 +22,8 @@ const SignInOAuthButtons = () => {
 			onClick={signInWithGoogle}
 			variant={"secondary"}
 			className="w-full text-white border-zinc-200 h-11">
+
+				<img src='/google.png' alt='Google' className='size-5' />
 			Continue with Google
 		</Button>
 	)
